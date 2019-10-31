@@ -71,17 +71,21 @@ const ButtonContainer = styled.div`
 	display: flex;
 	flex-wrap: wrap;
 	width: 100%;
-	justify-content: center;
+	justify-content: space-around;
 `;
 
 const StyledButton = styled.button`
-	margin: 1.5em 0.8em;
-	text-align: left;
-	border: 2px solid hsl(228, 53%, 34%);
+	width: 16vw;
+	height: 5vh;
+	min-width: 120px;
+	margin: 1em 0.8em 1.5em 1.2em;
+	text-align: center;
+	border: 3px solid hsl(228, 53%, 34%);
 	border-radius: 6px;
 	background: none;
 	color: #293c85;
-	font-weight: 500;
+	font-weight: 600;
+	font-size: larger;
 	transition: all 0.25s linear;
 
 	user-select: none;
@@ -124,7 +128,7 @@ const UpperLeft = () => {
 					<LogoVandyHacksText />
 				</LogoVandyHacksTextStyleMobile>
 				<ButtonContainer>
-					<SocialMedias isMobile={isMobile} />
+					<SocialMedias />
 				</ButtonContainer>
 			</ContainerMobile>
 		);

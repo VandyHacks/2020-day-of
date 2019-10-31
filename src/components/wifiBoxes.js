@@ -61,6 +61,7 @@ const BoxTitleContainer = styled.div`
 const endEventTime = new Date('2019-11-03T23:59:59.999Z');
 
 const Boxes = () => {
+	const isMobile = useContext(isMobileContext);
 	return (
 		<Container>
 			<ButtonContainer>
@@ -95,7 +96,7 @@ const Boxes = () => {
 				<TwitterTimelineEmbed
 					sourceType="profile"
 					screenName="VandyHacks"
-					options={{ height: 500, width: 750 }}
+					options={{ height: '50vh', width: isMobile ? '95vw' : '45vw' }}
 				/>
 			</BoxTitleContainer>
 		</Container>
