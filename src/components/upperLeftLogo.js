@@ -23,7 +23,7 @@ const fadeIn = keyframes`
 const Container = styled.div`
 	margin: 1em;
 	position: relative;
-	width: 100%;
+	width: calc(100% - 2em);
 	justify-content: left;
 	animation: ${fadeIn} 1s linear;
 	&:after {
@@ -62,8 +62,6 @@ const LogoVandyHacksTextStyleMobile = styled.div`
 	margin: 1.5em auto 0.3em auto;
 	left: 0;
 	right: 0;
-	margin-left: auto;
-	margin-right: auto;
 	fill: white;
 	fill-opacity: 1;
 	z-index: 2;
@@ -126,8 +124,6 @@ const UpperLeft = () => {
 					<LogoVandyHacksText />
 				</LogoVandyHacksTextStyleMobile>
 				<ButtonContainer>
-					<StyledButton onClick={() => (window.location = '#')}>Hacker Guide</StyledButton>
-					<StyledButton onClick={() => (window.location = '#')}>Sponsor Guide</StyledButton>
 					<SocialMedias isMobile={isMobile} />
 				</ButtonContainer>
 			</ContainerMobile>
@@ -139,8 +135,9 @@ const UpperLeft = () => {
 					<LogoVandyHacksText />
 				</LogoVandyHacksTextStyle>
 				<ButtonContainer>
-					<StyledButton onClick={() => (window.location = '#')}>Hacker Guide</StyledButton>
-					<StyledButton onClick={() => (window.location = '#')}>Sponsor Guide</StyledButton>
+					<StyledButton onClick={() => (window.location = 'https://hackerguide.vandyhacks.org')}>
+						Hacker Guide
+					</StyledButton>
 					<SocialMedias />
 				</ButtonContainer>
 			</Container>

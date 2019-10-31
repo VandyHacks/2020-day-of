@@ -50,6 +50,8 @@ const StyledUL = styled.ul`
 	margin: 0;
 	margin-top: 1em;
 	padding: 0;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(100px, 50%));
 `;
 
 const StyledLi = styled.li`
@@ -64,18 +66,14 @@ const StyledLi = styled.li`
 		text-decoration: none;
 		color: hsl(228, 53%, 34%);
 		display: block;
-		width: 200px;
 		font-size: 0.8em;
 
-		-webkit-transition: font-size 0.3s ease, background-color 0.3s ease;
-		-moz-transition: font-size 0.3s ease, background-color 0.3s ease;
-		-o-transition: font-size 0.3s ease, background-color 0.3s ease;
-		-ms-transition: font-size 0.3s ease, background-color 0.3s ease;
-		transition: font-size 0.3s ease, background-color 0.3s ease;
+		transition: all 0.3s ease;
 	}
 
 	a:hover {
-		font-size: 1.5em;
+		opacity: 0.7;
+		transform: translateX(10px);
 	}
 `;
 
@@ -117,6 +115,7 @@ const BubbleStyle = styled.div`
 	left: -3em;
 	width: 20em;
 	opacity: 1;
+	z-index: -1;
 `;
 
 const BubbleStyleMobile = styled.div`
@@ -126,6 +125,7 @@ const BubbleStyleMobile = styled.div`
 	width: 20em;
 	opacity: 1;
 	margin-bottom: 3em;
+	z-index: -1;
 `;
 
 const ScheduleBox = () => {
@@ -137,19 +137,19 @@ const ScheduleBox = () => {
 				<h4>Important Links</h4>
 				<StyledUL>
 					<StyledLi>
-						<a href="#">(๑¯◡¯๑)</a>
+						<a href="https://map.vandyhacks.org">Maps</a>
 					</StyledLi>
 					<StyledLi>
-						<a href="#">(๑•̀ㅂ•́) ✧</a>
+						<a href="https://hackpacks.vandyhacks.org">HackPacks</a>
 					</StyledLi>
 					<StyledLi>
-						<a href="#">→_→</a>
+						<a href="https://workshops.vandyhacks.org">Workshops</a>
 					</StyledLi>
 					<StyledLi>
-						<a href="#">(｡ ･･｡)</a>
+						<a href="https://calendar.vandyhacks.org">Calendar</a>
 					</StyledLi>
 					<StyledLi>
-						<a href="#">( •̀ᴗ•́ )و ̑̑</a>
+						<a href="https://vandyhacksvi.slack.com">Slack</a>
 					</StyledLi>
 				</StyledUL>
 			</BoxTitleContainer>

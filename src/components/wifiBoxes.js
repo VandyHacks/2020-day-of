@@ -7,6 +7,7 @@ import '../../node_modules/animate.css/animate.min.css';
 
 import isMobileContext from './isMobileContext';
 import Countdown from 'react-countdown-now';
+import { TwitterTimelineEmbed } from 'react-twitter-embed';
 
 const fadeIn = keyframes`
 	from { 
@@ -21,6 +22,7 @@ const Container = styled.div`
 	margin: 0em;
 	position: relative;
 	width: 100%;
+	height: 100%;
 	justify-content: left;
 	animation: ${fadeIn} 1s linear;
 
@@ -101,17 +103,11 @@ const Boxes = () => {
 			</ButtonContainer>
 			<BoxTitleContainer>
 				<h4>Anouncement</h4>
-				<AnouncementBox>
-					All that is gold does not glitter, <br /> Not all those who wander are lost; <br />
-					The old that is strong does not wither, <br />
-					Deep roots are not reached by the frost. <br />
-					<br />
-					From the ashes a fire shall be woken, <br />
-					A light from the shadows shall spring;
-					<br />
-					Renewed shall be blade that was broken, <br />
-					The crownless again shall be king.
-				</AnouncementBox>
+				<TwitterTimelineEmbed
+					sourceType="profile"
+					screenName="VandyHacks"
+					options={{ height: 450, width: 400 }}
+				/>
 			</BoxTitleContainer>
 		</Container>
 	);
