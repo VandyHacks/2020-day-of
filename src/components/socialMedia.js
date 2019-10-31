@@ -95,26 +95,30 @@ const ToggleIcon = () => (
 	</svg>
 );
 
-const SocialMedias = isMobile => (
-	<StyledFooter>
-		<SocialIcons>
-			<a href="https://www.facebook.com/vandyhacks" rel="noopener noreferrer" target="_blank">
-				<Facebook />
-			</a>
-			<a href="https://twitter.com/vandyhacks" rel="noopener noreferrer" target="_blank">
-				<Twitter />
-			</a>
-			<a href="https://www.instagram.com/vandyhacks" rel="noopener noreferrer" target="_blank">
-				<Instagram />
-			</a>
-			<a href="https://www.github.com/VandyHacks" rel="noopener noreferrer" target="_blank">
-				<Github />
-			</a>
-			<a onClick={changeTheme}>
-				<ToggleIcon />
-			</a>
-		</SocialIcons>
-	</StyledFooter>
-);
+const SocialMedias = isMobile => {
+	if (1) {
+		return (
+			<StyledFooter>
+				<SocialIcons>
+					<a href="https://www.facebook.com/vandyhacks" rel="noopener noreferrer" target="_blank">
+						<Facebook />
+					</a>
+					<a href="https://twitter.com/vandyhacks" rel="noopener noreferrer" target="_blank">
+						<Twitter />
+					</a>
+					<a href="https://www.instagram.com/vandyhacks" rel="noopener noreferrer" target="_blank">
+						<Instagram />
+					</a>
+					<a href="https://www.github.com/VandyHacks" rel="noopener noreferrer" target="_blank">
+						<Github />
+					</a>
+					<a onClick={changeTheme}>
+						<ToggleIcon />
+					</a>
+				</SocialIcons>
+			</StyledFooter>
+		);
+	}
+};
 
 export default SocialMedias;

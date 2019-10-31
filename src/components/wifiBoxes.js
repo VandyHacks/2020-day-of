@@ -68,7 +68,14 @@ const Boxes = () => {
 					<h4>Time Remaining</h4>
 					<TextBox style={{ fontSize: '1.6em', minWidth: '11.7em' }}>
 						<div
-							style={{ minWidth: '172px', width: '50%', whiteSpace: 'nowrap', textAlign: 'center' }}
+							style={{
+								fontFamily: 'Segoe UI',
+								fontVariantNumeric: 'tabular-nums',
+								minWidth: '172px',
+								width: '50%',
+								whiteSpace: 'nowrap',
+								textAlign: 'center',
+							}}
 						>
 							<Countdown date={endEventTime} />
 						</div>
