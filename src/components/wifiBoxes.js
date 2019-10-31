@@ -7,6 +7,7 @@ import '../../node_modules/animate.css/animate.min.css';
 
 import isMobileContext from './isMobileContext';
 import Countdown from 'react-countdown-now';
+import { TwitterTimelineEmbed } from 'react-twitter-embed';
 
 const fadeIn = keyframes`
 	from { 
@@ -46,25 +47,6 @@ const TextBox = styled.div`
 	}
 `;
 
-const AnnouncementBox = styled.div`
-	font-size: 0.8em;
-	color: #fff;
-	background: hsl(228, 53%, 34%);
-	margin: 1rem;
-	padding: 1em 3em;
-	border-radius: 30px;
-	min-height: calc(100vh - 32em);
-
-	display: flex;
-	justify-content: ; /* align horizontal */
-	align-items: center; /* align vertical */
-	text-align: left;
-
-	@media screen and (max-width: 480px) {
-		font-size: 1em;
-	}
-`;
-
 const ButtonContainer = styled.div`
 	display: flex;
 	flex-wrap: wrap;
@@ -79,15 +61,15 @@ const BoxTitleContainer = styled.div`
 const endEventTime = new Date('2019-11-03T23:59:59.999Z');
 
 const Boxes = () => {
-	// const isMobile = useContext(isMobileContext);
-
 	return (
 		<Container>
 			<ButtonContainer>
 				<BoxTitleContainer>
 					<h4>Time Remaining</h4>
 					<TextBox style={{ fontSize: '1.6em', minWidth: '11.7em' }}>
-						<div style={{ width: '50%', whiteSpace: 'nowrap', textAlign: 'left' }}>
+						<div
+							style={{ minWidth: '172px', width: '50%', whiteSpace: 'nowrap', textAlign: 'center' }}
+						>
 							<Countdown date={endEventTime} />
 						</div>
 					</TextBox>
@@ -103,17 +85,11 @@ const Boxes = () => {
 			</ButtonContainer>
 			<BoxTitleContainer>
 				<h4>Announcements</h4>
-				<AnnouncementBox>
-					All that is gold does not glitter, <br /> Not all those who wander are lost; <br />
-					The old that is strong does not wither, <br />
-					Deep roots are not reached by the frost. <br />
-					<br />
-					From the ashes a fire shall be woken, <br />
-					A light from the shadows shall spring;
-					<br />
-					Renewed shall be blade that was broken, <br />
-					The crownless again shall be king.
-				</AnnouncementBox>
+				<TwitterTimelineEmbed
+					sourceType="profile"
+					screenName="VandyHacks"
+					options={{ height: 500, width: 750 }}
+				/>
 			</BoxTitleContainer>
 		</Container>
 	);

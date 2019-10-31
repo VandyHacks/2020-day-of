@@ -11,14 +11,17 @@ import '../../node_modules/animate.css/animate.min.css';
 import '../css/layout.css';
 
 const Container = styled.div`
-	width: 100%;
+	width: 100vw;
+	margin: 0;
+	height: 100vh;
+	overflow: hidden;
 `;
 
 const IndexPage = ({ pageContext: { events } })  => {
 	const [isMobile, setIsMobile] = useState(undefined);
 
 	const handleWindowResize = useCallback(() => {
-		setIsMobile(window.innerWidth < 768);
+		setIsMobile(window.innerWidth < 930);
 	}, [setIsMobile]);
 
 	useEffect(() => {
