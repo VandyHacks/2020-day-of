@@ -153,15 +153,25 @@ const PenStyleMobile = styled.div`
 	opacity: 1;
 `;
 
-const BubbleStyle = styled.div`
-	position: relative;
-	top: 2em;
-	left: -3em;
-	min-width: 15em;
-	opacity: 1;
-	z-index: -1;
-	white-space: no-wrap;
-`;
+const BubbleStyle = isChrome
+	? styled.div`
+			position: relative;
+			top: 2em;
+			left: 3em;
+			min-width: 15em;
+			opacity: 1;
+			z-index: -1;
+			white-space: no-wrap;
+	  `
+	: styled.div`
+			position: relative;
+			top: 2em;
+			left: -3em;
+			min-width: 15em;
+			opacity: 1;
+			z-index: -1;
+			white-space: no-wrap;
+	  `;
 
 const BubbleStyleMobile = styled.div`
 	position: relative;
