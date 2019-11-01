@@ -14,7 +14,8 @@ const Container = styled.div`
 	width: 100vw;
 	margin: 0;
 	height: 100vh;
-	overflow: hidden;
+	overflow-x: hidden;
+	overflow-y: auto;
 `;
 
 const ContainerMobile = styled.div`
