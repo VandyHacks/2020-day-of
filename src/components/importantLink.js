@@ -158,6 +158,7 @@ const BubbleStyle = styled.div`
 	min-width: 15em;
 	opacity: 1;
 	z-index: -1;
+	white-space: no-wrap;
 `;
 
 const BubbleStyleMobile = styled.div`
