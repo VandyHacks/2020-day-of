@@ -99,9 +99,9 @@ const Boxes = () => {
 				<BoxTitleContainer>
 					<h4 style={{ fontSize: '1.5em' }}>Wifi Login</h4>
 					<TextBox>
-						Username: 1234
+						Username: eduroam or vuGuest
 						<br />
-						Password: 567890
+						No Password
 					</TextBox>
 				</BoxTitleContainer>
 			</ButtonContainer>
