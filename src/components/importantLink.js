@@ -15,6 +15,21 @@ import Calendar from '../images/calendar.svg';
 import Books from '../images/books.svg';
 import Workshop from '../images/workshop.svg';
 
+const isChromium = window.chrome;
+const winNav = window.navigator;
+const vendorName = winNav.vendor;
+const isOpera = typeof window.opr !== 'undefined';
+const isIEedge = winNav.userAgent.indexOf('Edge') > -1;
+const isIOSChrome = winNav.userAgent.match('CriOS');
+
+const isChrome =
+	isChromium !== null &&
+	typeof isChromium !== 'undefined' &&
+	vendorName === 'Google Inc.' &&
+	isOpera === false &&
+	isIEedge === false &&
+	!isIOSChrome;
+
 const fadeIn = keyframes`
 	from { 
 		opacity: 0;
@@ -40,15 +55,29 @@ const ContainerMobile = styled.div`
 	animation: ${fadeIn} 1s linear;
 `;
 
-const BoxTitleContainer = styled.div`
-	margin: 0em 0em 0em 3em;
-	position: static;
-	width: 24rem;
-	height: 110%;
-	opacity: 1;
-	float: left;
-	white-space: nowrap;
-`;
+let BoxTitleContainer;
+
+if (isChrome) {
+	BoxTitleContainer = styled.div`
+		margin: 0em 0em 0em -2em;
+		position: static;
+		width: 24rem;
+		height: 110%;
+		opacity: 1;
+		float: left;
+		white-space: nowrap;
+	`;
+} else {
+	BoxTitleContainer = styled.div`
+		margin: 0em 0em 0em 2em;
+		position: static;
+		width: 24rem;
+		height: 110%;
+		opacity: 1;
+		float: left;
+		white-space: nowrap;
+	`;
+}
 
 const StyledULTop = styled.ul`
 	list-style-type: none;
@@ -149,17 +178,30 @@ const ScheduleBox = () => {
 		padding: '0 0.5rem',
 		cursor: 'pointer',
 	};
-	const bottomIconSize = {
-		height: '11rem',
-		width: '11rem',
-		padding: '0rem 0.5rem',
-		cursor: 'pointer',
-	};
-	const workshopIcon = {
-		height: '10rem',
-		width: '10rem',
-		padding: '0.5rem 0.5rem 1rem 1rem',
-	};
+	const bottomIconSize = isChrome
+		? {
+				height: '10rem',
+				width: '10rem',
+				padding: '0rem 0.5rem',
+				cursor: 'pointer',
+		  }
+		: {
+				height: '10.5rem',
+				width: '10.5rem',
+				padding: '0rem 0.5rem',
+				cursor: 'pointer',
+		  };
+	const workshopIcon = isChrome
+		? {
+				height: '9rem',
+				width: '9rem',
+				padding: '0rem 0.5rem 1rem 1rem',
+		  }
+		: {
+				height: '9.5rem',
+				width: '9.5rem',
+				padding: '0.5rem 0.5rem 1rem 1rem',
+		  };
 
 	return (
 		<Container>

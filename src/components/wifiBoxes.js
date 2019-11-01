@@ -112,7 +112,7 @@ const Boxes = () => {
 					screenName="VandyHacks"
 					options={{
 						minHeight: '440px',
-						height: 930 < window.innerWidth && window.innerWidth < 1310 ? '40vh' : '52vh',
+						height: 930 < window.innerWidth && window.innerWidth < 1310 ? '40vh' : '51vh',
 						width: isMobile ? '95vw' : '40vw',
 					}} // 1306px is threshold
 				/>
