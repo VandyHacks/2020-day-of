@@ -31,7 +31,6 @@ const EVENTTYPE = 'VEVENT';
 //     }
 // }
 
-
 // export async function getEvents() {
 // 	axios
 // 		.get(url)

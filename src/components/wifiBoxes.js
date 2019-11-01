@@ -37,7 +37,7 @@ const TextBox = styled.div`
 	margin: 0rem 1rem 1rem;
 	padding: 1em 3em;
 	border-radius: 30px;
-	height: 4.5rem;
+	height: 4.2rem;
 
 	display: flex;
 	justify-content: center; /* align horizontal */
@@ -80,11 +80,11 @@ const Boxes = () => {
 		<Container>
 			<ButtonContainer>
 				<BoxTitleContainer>
-					<h4 style={{ fontSize: '1.6em' }}>Time Remaining</h4>
-					<TextBox style={{ fontSize: '1.6em', minWidth: '11.7em' }}>
+					<h4 style={{ fontSize: '1.5em' }}>Time Remaining</h4>
+					<TextBox style={{ fontSize: '1.5em', minWidth: '11.7em' }}>
 						<div
 							style={{
-								fontFamily: 'Segoe UI',
+								fontFamily: 'Segoe UI Regular',
 								fontVariantNumeric: 'tabular-nums',
 								minWidth: '172px',
 								width: '50%',
@@ -97,7 +97,7 @@ const Boxes = () => {
 					</TextBox>
 				</BoxTitleContainer>
 				<BoxTitleContainer>
-					<h4 style={{ fontSize: '1.6em' }}>Wifi Login</h4>
+					<h4 style={{ fontSize: '1.5em' }}>Wifi Login</h4>
 					<TextBox>
 						Username: 1234
 						<br />
@@ -106,13 +106,13 @@ const Boxes = () => {
 				</BoxTitleContainer>
 			</ButtonContainer>
 			<BoxTitleContainer>
-				<h4 style={{ marginTop: isMobile ? '0' : '0.5rem', fontSize: '1.6em' }}>Announcements</h4>
+				<h4 style={{ marginTop: isMobile ? '0' : '0.5rem', fontSize: '1.5em' }}>Announcements</h4>
 				<TwitterTimelineEmbed
 					sourceType="profile"
 					screenName="VandyHacks"
 					options={{
 						minHeight: '440px',
-						height: 930 < window.innerWidth && window.innerWidth < 1310 ? '40vh' : '52vh',
+						height: 930 < window.innerWidth && window.innerWidth < 1310 ? '40vh' : '51vh',
 						width: isMobile ? '95vw' : '40vw',
 					}} // 1306px is threshold
 				/>

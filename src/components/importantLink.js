@@ -15,6 +15,21 @@ import Calendar from '../images/calendar.svg';
 import Books from '../images/books.svg';
 import Workshop from '../images/workshop.svg';
 
+const isChromium = window.chrome;
+const winNav = window.navigator;
+const vendorName = winNav.vendor;
+const isOpera = typeof window.opr !== 'undefined';
+const isIEedge = winNav.userAgent.indexOf('Edge') > -1;
+const isIOSChrome = winNav.userAgent.match('CriOS');
+
+const isChrome =
+	isChromium !== null &&
+	typeof isChromium !== 'undefined' &&
+	vendorName === 'Google Inc.' &&
+	isOpera === false &&
+	isIEedge === false &&
+	!isIOSChrome;
+
 const fadeIn = keyframes`
 	from { 
 		opacity: 0;
@@ -40,14 +55,29 @@ const ContainerMobile = styled.div`
 	animation: ${fadeIn} 1s linear;
 `;
 
-const BoxTitleContainer = styled.div`
-	margin: 0em 1.5em;
-	position: static;
-	width: 24rem;
-	height: 100%;
-	opacity: 1;
-	float: left;
-`;
+let BoxTitleContainer;
+
+if (isChrome) {
+	BoxTitleContainer = styled.div`
+		margin: 0em 0em 0em -2em;
+		position: static;
+		width: 24rem;
+		height: 110%;
+		opacity: 1;
+		float: left;
+		white-space: nowrap;
+	`;
+} else {
+	BoxTitleContainer = styled.div`
+		margin: 0em 0em 0em 2em;
+		position: static;
+		width: 24rem;
+		height: 110%;
+		opacity: 1;
+		float: left;
+		white-space: nowrap;
+	`;
+}
 
 const StyledULTop = styled.ul`
 	list-style-type: none;
@@ -55,7 +85,7 @@ const StyledULTop = styled.ul`
 	padding: 0;
 	display: grid;
 	grid-template-columns: 8rem 8rem 8rem;
-	grid-template-rows: 8rem;
+	grid-template-rows: 7rem;
 `;
 
 const StyledULBottom = styled.ul`
@@ -64,7 +94,7 @@ const StyledULBottom = styled.ul`
 	padding: 0;
 	display: grid;
 	grid-template-columns: 12rem 12rem;
-	grid-template-rows: 12rem;
+	grid-template-rows: 11rem;
 `;
 
 const StyledLi = styled.li`
@@ -91,23 +121,23 @@ const StyledLi = styled.li`
 
 const BoxStyle = styled.div`
 	position: absolute;
-	top: 10.3em;
-	left: 77%;
+	top: 12.3em;
+	left: 75%;
 	width: 3.3em;
 	opacity: 1;
 `;
 
 const BoxStyleMobile = styled.div`
 	position: absolute;
-	top: 7.3em;
-	left: 73%;
+	top: 12.3em;
+	left: 80%;
 	width: 3.3em;
 	opacity: 1;
 `;
 
 const PenStyle = styled.div`
 	position: absolute;
-	top: 9.3em;
+	top: 10.8em;
 	left: 89%;
 	width: 3.4em;
 	opacity: 1;
@@ -116,16 +146,16 @@ const PenStyle = styled.div`
 const PenStyleMobile = styled.div`
 	position: absolute;
 	top: 1.3em;
-	left: 72%;
+	left: 82%;
 	width: 3.4em;
 	opacity: 1;
 `;
 
 const BubbleStyle = styled.div`
 	position: relative;
-	top: 1em;
+	top: 2em;
 	left: -3em;
-	width: 20em;
+	min-width: 15em;
 	opacity: 1;
 	z-index: -1;
 `;
@@ -133,7 +163,7 @@ const BubbleStyle = styled.div`
 const BubbleStyleMobile = styled.div`
 	position: relative;
 	top: 1em;
-	left: 0em;
+	left: 3em;
 	width: 20em;
 	opacity: 1;
 	margin-bottom: 3em;
@@ -145,20 +175,33 @@ const ScheduleBox = () => {
 	const topIconSize = {
 		height: '7rem',
 		width: '7rem',
-		padding: '0.5rem',
+		padding: '0 0.5rem',
 		cursor: 'pointer',
 	};
-	const bottomIconSize = {
-		height: '11rem',
-		width: '11rem',
-		padding: '0.5rem',
-		cursor: 'pointer',
-	};
-	const workshopIcon = {
-		height: '10rem',
-		width: '10rem',
-		padding: '1rem 0.5rem 1rem 1rem',
-	};
+	const bottomIconSize = isChrome
+		? {
+				height: '10rem',
+				width: '10rem',
+				padding: '0rem 0.5rem',
+				cursor: 'pointer',
+		  }
+		: {
+				height: '10.5rem',
+				width: '10.5rem',
+				padding: '0rem 0.5rem',
+				cursor: 'pointer',
+		  };
+	const workshopIcon = isChrome
+		? {
+				height: '9rem',
+				width: '9rem',
+				padding: '0rem 0.5rem 1rem 1rem',
+		  }
+		: {
+				height: '9.5rem',
+				width: '9.5rem',
+				padding: '0.5rem 0.5rem 1rem 1rem',
+		  };
 
 	return (
 		<Container>
@@ -194,7 +237,7 @@ const ScheduleBox = () => {
 					</StyledLi>
 				</StyledULBottom>
 			</BoxTitleContainer>
-			{{ isMobile } ? (
+			{isMobile ? (
 				<>
 					<BubbleStyleMobile>
 						<BubbleBox />
@@ -208,7 +251,7 @@ const ScheduleBox = () => {
 				</>
 			) : (
 				<>
-					<BoxTitleContainer style={{ display: 'flex', flexDirection: 'row', width: '10em' }}>
+					<BoxTitleContainer style={{ display: 'flex', flexDirection: 'row', width: '12em' }}>
 						<BubbleStyle>
 							<BubbleBox />
 						</BubbleStyle>

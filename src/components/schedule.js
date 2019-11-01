@@ -113,7 +113,7 @@ const ScheduleBox = ({ events }) => {
 						events={events}
 						// step={60}
 						defaultView={'agenda'}
-						views={['day', 'agenda']}
+						views={['agenda']}
 						showMultiDayTimes
 						// max={dates.add(dates.endOf(new Date(2015, 17, 1), 'day'), -1, 'hours')}
 						components={{
