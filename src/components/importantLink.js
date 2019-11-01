@@ -61,7 +61,7 @@ let BoxTitleContainer;
 
 if (isChrome) {
 	BoxTitleContainer = styled.div`
-		margin: 0em 0em 0em -2em;
+		margin: 0em 0em 0em -1em;
 		position: static;
 		width: 24rem;
 		height: 110%;
