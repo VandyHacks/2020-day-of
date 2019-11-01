@@ -217,7 +217,7 @@ const ScheduleBox = () => {
 		  };
 
 	return (
-		<Container>
+		<Container style={{ marginLeft: isMobile ? '9em' : '1em' }}>
 			<BoxTitleContainer>
 				<h4 style={{ fontSize: '1.7em' }}>Important Links</h4>
 				<StyledULTop>
