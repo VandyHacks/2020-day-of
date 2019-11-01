@@ -15,20 +15,22 @@ import Calendar from '../images/calendar.svg';
 import Books from '../images/books.svg';
 import Workshop from '../images/workshop.svg';
 
-const isChromium = window.chrome;
-const winNav = window.navigator;
-const vendorName = winNav.vendor;
-const isOpera = typeof window.opr !== 'undefined';
-const isIEedge = winNav.userAgent.indexOf('Edge') > -1;
-const isIOSChrome = winNav.userAgent.match('CriOS');
-
-const isChrome =
-	isChromium !== null &&
-	typeof isChromium !== 'undefined' &&
-	vendorName === 'Google Inc.' &&
-	isOpera === false &&
-	isIEedge === false &&
-	!isIOSChrome;
+let isChrome;
+if (typeof window !== `undefined`) {
+	const isChromium = window.chrome;
+	const winNav = window.navigator;
+	const vendorName = winNav.vendor;
+	const isOpera = typeof window.opr !== 'undefined';
+	const isIEedge = winNav.userAgent.indexOf('Edge') > -1;
+	const isIOSChrome = winNav.userAgent.match('CriOS');
+	isChrome =
+		isChromium !== null &&
+		typeof isChromium !== 'undefined' &&
+		vendorName === 'Google Inc.' &&
+		isOpera === false &&
+		isIEedge === false &&
+		!isIOSChrome;
+}
 
 const fadeIn = keyframes`
 	from { 
@@ -158,6 +160,7 @@ const BubbleStyle = styled.div`
 	min-width: 15em;
 	opacity: 1;
 	z-index: -1;
+	white-space: no-wrap;
 `;
 
 const BubbleStyleMobile = styled.div`

@@ -33,7 +33,9 @@ const IndexPage = ({ pageContext: { events } }) => {
 	}, [setIsMobile]);
 
 	useEffect(() => {
-		window.addEventListener('resize', handleWindowResize);
+		if (typeof window !== `undefined`) {
+			window.addEventListener('resize', handleWindowResize);
+		}
 
 		// First resize
 		const timeout = setInterval(() => {
@@ -55,7 +57,7 @@ const IndexPage = ({ pageContext: { events } }) => {
 				<isMobileContext.Provider value={isMobile}>
 					<Dayof events={events} />
 				</isMobileContext.Provider>
-				{/* <a
+				<a
 					id="mlh-trust-badge"
 					style={{
 						display: 'block',
@@ -76,7 +78,7 @@ const IndexPage = ({ pageContext: { events } }) => {
 						alt="Major League Hacking 2020 Hackathon Season"
 						style={{ width: '100%' }}
 					/>
-				</a> */}
+				</a>
 			</ContainerMobile>
 		</>
 	) : (
@@ -86,7 +88,7 @@ const IndexPage = ({ pageContext: { events } }) => {
 				<isMobileContext.Provider value={isMobile}>
 					<Dayof events={events} />
 				</isMobileContext.Provider>
-				{/* <a
+				<a
 					id="mlh-trust-badge"
 					style={{
 						display: 'block',
@@ -107,7 +109,7 @@ const IndexPage = ({ pageContext: { events } }) => {
 						alt="Major League Hacking 2020 Hackathon Season"
 						style={{ width: '100%' }}
 					/>
-				</a> */}
+				</a>
 			</Container>
 		</>
 	);
