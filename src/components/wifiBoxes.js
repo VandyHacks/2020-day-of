@@ -84,7 +84,7 @@ const Boxes = () => {
 					<TextBox style={{ fontSize: '1.6em', minWidth: '11.7em' }}>
 						<div
 							style={{
-								fontFamily: 'Segoe UI',
+								fontFamily: 'Segoe UI Regular',
 								fontVariantNumeric: 'tabular-nums',
 								minWidth: '172px',
 								width: '50%',

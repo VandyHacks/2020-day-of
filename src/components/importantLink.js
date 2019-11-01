@@ -41,12 +41,13 @@ const ContainerMobile = styled.div`
 `;
 
 const BoxTitleContainer = styled.div`
-	margin: 0em 1.5em;
+	margin: 0em 0em 0em 3em;
 	position: static;
 	width: 24rem;
-	height: 100%;
+	height: 110%;
 	opacity: 1;
 	float: left;
+	white-space: nowrap;
 `;
 
 const StyledULTop = styled.ul`
@@ -91,23 +92,23 @@ const StyledLi = styled.li`
 
 const BoxStyle = styled.div`
 	position: absolute;
-	top: 10.3em;
-	left: 77%;
+	top: 12.3em;
+	left: 75%;
 	width: 3.3em;
 	opacity: 1;
 `;
 
 const BoxStyleMobile = styled.div`
 	position: absolute;
-	top: 7.3em;
-	left: 73%;
+	top: 12.3em;
+	left: 80%;
 	width: 3.3em;
 	opacity: 1;
 `;
 
 const PenStyle = styled.div`
 	position: absolute;
-	top: 9.3em;
+	top: 10.8em;
 	left: 89%;
 	width: 3.4em;
 	opacity: 1;
@@ -116,16 +117,17 @@ const PenStyle = styled.div`
 const PenStyleMobile = styled.div`
 	position: absolute;
 	top: 1.3em;
-	left: 72%;
+	left: 82%;
 	width: 3.4em;
 	opacity: 1;
+	z-value: -1;
 `;
 
 const BubbleStyle = styled.div`
 	position: relative;
-	top: 1em;
+	top: 2em;
 	left: -3em;
-	width: 20em;
+	min-width: 15em;
 	opacity: 1;
 	z-index: -1;
 `;
@@ -133,7 +135,7 @@ const BubbleStyle = styled.div`
 const BubbleStyleMobile = styled.div`
 	position: relative;
 	top: 1em;
-	left: 0em;
+	left: 3em;
 	width: 20em;
 	opacity: 1;
 	margin-bottom: 3em;
@@ -194,7 +196,7 @@ const ScheduleBox = () => {
 					</StyledLi>
 				</StyledULBottom>
 			</BoxTitleContainer>
-			{{ isMobile } ? (
+			{isMobile ? (
 				<>
 					<BubbleStyleMobile>
 						<BubbleBox />
@@ -208,7 +210,7 @@ const ScheduleBox = () => {
 				</>
 			) : (
 				<>
-					<BoxTitleContainer style={{ display: 'flex', flexDirection: 'row', width: '10em' }}>
+					<BoxTitleContainer style={{ display: 'flex', flexDirection: 'row', width: '12em' }}>
 						<BubbleStyle>
 							<BubbleBox />
 						</BubbleStyle>
