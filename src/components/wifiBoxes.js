@@ -59,17 +59,20 @@ const BoxTitleContainer = styled.div`
 	flex: auto;
 `;
 
-const endEventTime = new Date('2019-11-03T23:59:59.999Z');
+const endEventTime = new Date('2019-11-03T10:00:00.000Z');
 
-let viewportWidth = window.innerWidth;
-window.onresize = () => {
-	if (window.innerWidth < 1310 && viewportWidth >= 1310) {
-		document.location.reload();
-	} else if (window.innerWidth >= 1310 && viewportWidth < 1310) {
-		document.location.reload();
-	}
-	viewportWidth = window.innerWidth;
-};
+if (typeof window !== `undefined`) {
+	let viewportWidth = window.innerWidth;
+
+	window.onresize = () => {
+		if (window.innerWidth < 1310 && viewportWidth >= 1310) {
+			document.location.reload();
+		} else if (window.innerWidth >= 1310 && viewportWidth < 1310) {
+			document.location.reload();
+		}
+		viewportWidth = window.innerWidth;
+	};
+}
 
 const Boxes = () => {
 	const isMobile = useContext(isMobileContext);
