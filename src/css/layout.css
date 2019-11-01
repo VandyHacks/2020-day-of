@@ -669,3 +669,7 @@ svg {
 button {
 	cursor: pointer;
 }
+
+.icon {
+	fill: rgb(41, 59, 133);
+}

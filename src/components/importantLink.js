@@ -13,7 +13,7 @@ import Slack from '../images/slack.svg';
 import Maps from '../images/maps.svg';
 import Calendar from '../images/calendar.svg';
 import Books from '../images/books.svg';
-import Hammer from '../images/hammer.svg';
+import Workshop from '../images/workshop.svg';
 
 const fadeIn = keyframes`
 	from { 
@@ -41,25 +41,34 @@ const ContainerMobile = styled.div`
 `;
 
 const BoxTitleContainer = styled.div`
-	margin: 1em 1.5em;
+	margin: 0em 1.5em;
 	position: static;
-	width: 12em;
+	width: 24rem;
 	height: 100%;
 	opacity: 1;
 	float: left;
 `;
 
-const StyledUL = styled.ul`
+const StyledULTop = styled.ul`
 	list-style-type: none;
-	margin: 1em 0 0 0;
+	margin: 0;
 	padding: 0;
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(100px, 50%));
+	grid-template-columns: 8rem 8rem 8rem;
+	grid-template-rows: 8rem;
+`;
+
+const StyledULBottom = styled.ul`
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	display: grid;
+	grid-template-columns: 12rem 12rem;
+	grid-template-rows: 12rem;
 `;
 
 const StyledLi = styled.li`
 	font: 200 20px/1.5 Helvetica, Verdana, sans-serif;
-	border-bottom: 1px solid #ccc;
 
 	&:last-child {
 		border: none;
@@ -76,7 +85,7 @@ const StyledLi = styled.li`
 
 	a:hover {
 		opacity: 0.7;
-		transform: translateX(10px);
+		transform: scale(1.1);
 	}
 `;
 
@@ -133,43 +142,57 @@ const BubbleStyleMobile = styled.div`
 
 const ScheduleBox = () => {
 	const isMobile = useContext(isMobileContext);
-	const iconSize = {
-		height: '90px',
-		width: '90px',
+	const topIconSize = {
+		height: '7rem',
+		width: '7rem',
+		padding: '0.5rem',
 		cursor: 'pointer',
+	};
+	const bottomIconSize = {
+		height: '11rem',
+		width: '11rem',
+		padding: '0.5rem',
+		cursor: 'pointer',
+	};
+	const workshopIcon = {
+		height: '10rem',
+		width: '10rem',
+		padding: '1rem 0.5rem 1rem 1rem',
 	};
 
 	return (
 		<Container>
 			<BoxTitleContainer>
 				<h4 style={{ fontSize: '1.7em' }}>Important Links</h4>
-				<StyledUL>
+				<StyledULTop>
 					<StyledLi>
 						<a href="https://map.vandyhacks.org">
-							<Maps style={iconSize} />
-						</a>
-					</StyledLi>
-					<StyledLi>
-						<a href="https://learn.vandyhacks.org">
-							<Books style={iconSize} />
-						</a>
-					</StyledLi>
-					<StyledLi>
-						<a href="https://learn.vandyhacks.org">
-							<Hammer />
+							<Maps className="icon" style={topIconSize} />
 						</a>
 					</StyledLi>
 					<StyledLi>
 						<a href="https://calendar.vandyhacks.org">
-							<Calendar style={iconSize} />
+							<Calendar className="icon" style={topIconSize} />
 						</a>
 					</StyledLi>
 					<StyledLi>
 						<a href="https://vandyhacksvi.slack.com">
-							<Slack style={iconSize} />
+							<Slack className="icon" style={topIconSize} />
 						</a>
 					</StyledLi>
-				</StyledUL>
+				</StyledULTop>
+				<StyledULBottom>
+					<StyledLi>
+						<a href="https://learn.vandyhacks.org">
+							<Books className="icon" style={bottomIconSize} />
+						</a>
+					</StyledLi>
+					<StyledLi>
+						<a href="https://learn.vandyhacks.org">
+							<Workshop className="icon" style={workshopIcon} />
+						</a>
+					</StyledLi>
+				</StyledULBottom>
 			</BoxTitleContainer>
 			{{ isMobile } ? (
 				<>
@@ -185,7 +208,7 @@ const ScheduleBox = () => {
 				</>
 			) : (
 				<>
-					<BoxTitleContainer style={{ width: '10em' }}>
+					<BoxTitleContainer style={{ display: 'flex', flexDirection: 'row', width: '10em' }}>
 						<BubbleStyle>
 							<BubbleBox />
 						</BubbleStyle>
