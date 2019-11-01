@@ -208,12 +208,12 @@ const ScheduleBox = () => {
 		? {
 				height: '9rem',
 				width: '9rem',
-				padding: '0rem 0.5rem 1rem 1rem',
+				padding: '1rem 0.5rem 1rem 1rem',
 		  }
 		: {
 				height: '9.5rem',
 				width: '9.5rem',
-				padding: '0.5rem 0.5rem 1rem 1rem',
+				padding: '1rem 0.5rem 1rem 1rem',
 		  };
 
 	return (
@@ -223,29 +223,51 @@ const ScheduleBox = () => {
 				<StyledULTop>
 					<StyledLi>
 						<a href="https://map.vandyhacks.org">
-							<Maps className="icon" style={topIconSize} />
+							<Maps id="maps" className="icon" style={topIconSize} />
+							<p style={{ marginTop: '-0.6em', color: 'rgb(41, 59, 133)', textAlign: 'center' }}>
+								Maps
+							</p>
 						</a>
 					</StyledLi>
 					<StyledLi>
 						<a href="https://calendar.vandyhacks.org">
-							<Calendar className="icon" style={topIconSize} />
+							<Calendar id="calendar" className="icon" style={topIconSize} />
+							<p style={{ marginTop: '-0.6em', color: 'rgb(41, 59, 133)', textAlign: 'center' }}>
+								Calendar
+							</p>
 						</a>
 					</StyledLi>
 					<StyledLi>
 						<a href="https://vandyhacksvi.slack.com">
-							<Slack className="icon" style={topIconSize} />
+							<Slack id="slack" className="icon" style={topIconSize} />
+							<p style={{ marginTop: '-0.6em', color: 'rgb(41, 59, 133)', textAlign: 'center' }}>
+								Slack
+							</p>
 						</a>
 					</StyledLi>
 				</StyledULTop>
 				<StyledULBottom>
 					<StyledLi>
 						<a href="https://learn.vandyhacks.org">
-							<Books className="icon" style={bottomIconSize} />
+							<Books id="books" className="icon" style={bottomIconSize} />
+							<p style={{ marginTop: '-2em', color: 'rgb(41, 59, 133)', textAlign: 'center' }}>
+								Hackpacks
+							</p>
 						</a>
 					</StyledLi>
 					<StyledLi>
 						<a href="https://learn.vandyhacks.org">
-							<Workshop className="icon" style={workshopIcon} />
+							<Workshop id="workshops" className="icon" style={workshopIcon} />
+							<p
+								style={{
+									marginTop: '-1em',
+									color: 'rgb(41, 59, 133)',
+									textAlign: 'center',
+									paddingRight: isMobile ? '0' : '3em',
+								}}
+							>
+								Workshops
+							</p>
 						</a>
 					</StyledLi>
 				</StyledULBottom>
