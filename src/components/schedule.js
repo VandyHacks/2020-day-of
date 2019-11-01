@@ -57,7 +57,7 @@ const ColoredDateCellWrapper = ({ children }) =>
 		},
 	});
 
-const ScheduleBox = ({ events = [] }) => {
+const ScheduleBox = ({ events }) => {
 	// following code is used when fetching the data in client side now moved to server side
 	/*
 	getEvents((events) => {
@@ -68,7 +68,6 @@ const ScheduleBox = ({ events = [] }) => {
 		getEvents(events => setEvents(events));
 	});
 	*/
-	events = [];
 
 	events.forEach(event => {
 		event.start = new Date(event.start);
@@ -87,7 +86,7 @@ const ScheduleBox = ({ events = [] }) => {
 					<Calendar
 						events={events}
 						// step={60}
-						defaultView={'day'}
+						defaultView={'agenda'}
 						views={['day', 'agenda']}
 						showMultiDayTimes
 						// max={dates.add(dates.endOf(new Date(2015, 17, 1), 'day'), -1, 'hours')}
@@ -113,7 +112,7 @@ const ScheduleBox = ({ events = [] }) => {
 					<Calendar
 						events={events}
 						// step={60}
-						defaultView={'day'}
+						defaultView={'agenda'}
 						views={['day', 'agenda']}
 						showMultiDayTimes
 						// max={dates.add(dates.endOf(new Date(2015, 17, 1), 'day'), -1, 'hours')}
