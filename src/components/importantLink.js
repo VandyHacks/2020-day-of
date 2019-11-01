@@ -138,7 +138,7 @@ const ScheduleBox = () => {
 						<a href="https://map.vandyhacks.org">Maps</a>
 					</StyledLi>
 					<StyledLi>
-						<a href="https://hackpacks.vandyhacks.org">HackPacks</a>
+						<a href="https://learn.vandyhacks.org">HackPacks</a>
 					</StyledLi>
 					<StyledLi>
 						<a href="https://workshops.vandyhacks.org">Workshops</a>
