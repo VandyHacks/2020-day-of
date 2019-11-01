@@ -33,7 +33,9 @@ const IndexPage = ({ pageContext: { events } }) => {
 	}, [setIsMobile]);
 
 	useEffect(() => {
-		window.addEventListener('resize', handleWindowResize);
+		if (typeof window !== `undefined`) {
+			window.addEventListener('resize', handleWindowResize);
+		}
 
 		// First resize
 		const timeout = setInterval(() => {
