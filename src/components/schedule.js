@@ -114,7 +114,7 @@ const ScheduleBox = ({ events = [] }) => {
 					<Calendar
 						events={events}
 						// step={60}
-						defaultView={'agenda'}
+						defaultView={'day'}
 						views={['day', 'agenda']}
 						showMultiDayTimes
 						// max={dates.add(dates.endOf(new Date(2015, 17, 1), 'day'), -1, 'hours')}

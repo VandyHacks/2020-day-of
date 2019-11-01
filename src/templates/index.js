@@ -28,8 +28,6 @@ const ContainerMobile = styled.div`
 const IndexPage = ({ pageContext: { events } }) => {
 	const [isMobile, setIsMobile] = useState(undefined);
 
-	console.log(isMobile);
-
 	const handleWindowResize = useCallback(() => {
 		setIsMobile(window.innerWidth < 930);
 	}, [setIsMobile]);

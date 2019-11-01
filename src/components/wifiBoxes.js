@@ -61,8 +61,14 @@ const BoxTitleContainer = styled.div`
 
 const endEventTime = new Date('2019-11-03T23:59:59.999Z');
 
+let viewportWidth = window.innerWidth;
 window.onresize = () => {
-	// document.location.reload();
+	if (window.innerWidth < 1310 && viewportWidth >= 1310) {
+		document.location.reload();
+	} else if (window.innerWidth >= 1310 && viewportWidth < 1310) {
+		document.location.reload();
+	}
+	viewportWidth = window.innerWidth;
 };
 
 const Boxes = () => {
@@ -71,7 +77,7 @@ const Boxes = () => {
 		<Container>
 			<ButtonContainer>
 				<BoxTitleContainer>
-					<h4 style={{ fontSize: '1.7em' }}>Time Remaining</h4>
+					<h4 style={{ fontSize: '1.6em' }}>Time Remaining</h4>
 					<TextBox style={{ fontSize: '1.6em', minWidth: '11.7em' }}>
 						<div
 							style={{
@@ -88,7 +94,7 @@ const Boxes = () => {
 					</TextBox>
 				</BoxTitleContainer>
 				<BoxTitleContainer>
-					<h4 style={{ fontSize: '1.7em' }}>Wifi Login</h4>
+					<h4 style={{ fontSize: '1.6em' }}>Wifi Login</h4>
 					<TextBox>
 						Username: 1234
 						<br />
@@ -97,7 +103,7 @@ const Boxes = () => {
 				</BoxTitleContainer>
 			</ButtonContainer>
 			<BoxTitleContainer>
-				<h4 style={{ marginTop: isMobile ? '0' : '0.5rem', fontSize: '1.7em' }}>Announcements</h4>
+				<h4 style={{ marginTop: isMobile ? '0' : '0.5rem', fontSize: '1.6em' }}>Announcements</h4>
 				<TwitterTimelineEmbed
 					sourceType="profile"
 					screenName="VandyHacks"
