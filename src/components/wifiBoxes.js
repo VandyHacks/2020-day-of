@@ -34,9 +34,10 @@ const TextBox = styled.div`
 	font-size: 0.8em;
 	color: #fff;
 	background: hsl(228, 53%, 34%);
-	margin: 1rem 1rem;
+	margin: 0rem 1rem 1rem;
 	padding: 1em 3em;
 	border-radius: 30px;
+	height: 4.5rem;
 
 	display: flex;
 	justify-content: center; /* align horizontal */
@@ -60,13 +61,17 @@ const BoxTitleContainer = styled.div`
 
 const endEventTime = new Date('2019-11-03T23:59:59.999Z');
 
+window.onresize = () => {
+	// document.location.reload();
+};
+
 const Boxes = () => {
 	const isMobile = useContext(isMobileContext);
 	return (
 		<Container>
 			<ButtonContainer>
 				<BoxTitleContainer>
-					<h4>Time Remaining</h4>
+					<h4 style={{ fontSize: '1.7em' }}>Time Remaining</h4>
 					<TextBox style={{ fontSize: '1.6em', minWidth: '11.7em' }}>
 						<div
 							style={{
@@ -83,7 +88,7 @@ const Boxes = () => {
 					</TextBox>
 				</BoxTitleContainer>
 				<BoxTitleContainer>
-					<h4>Wifi Login</h4>
+					<h4 style={{ fontSize: '1.7em' }}>Wifi Login</h4>
 					<TextBox>
 						Username: 1234
 						<br />
@@ -92,11 +97,15 @@ const Boxes = () => {
 				</BoxTitleContainer>
 			</ButtonContainer>
 			<BoxTitleContainer>
-				<h4>Announcements</h4>
+				<h4 style={{ marginTop: isMobile ? '0' : '0.5rem', fontSize: '1.7em' }}>Announcements</h4>
 				<TwitterTimelineEmbed
 					sourceType="profile"
 					screenName="VandyHacks"
-					options={{ height: '50vh', width: isMobile ? '95vw' : '45vw' }}
+					options={{
+						minHeight: '440px',
+						height: 930 < window.innerWidth && window.innerWidth < 1310 ? '40vh' : '52vh',
+						width: isMobile ? '95vw' : '40vw',
+					}} // 1306px is threshold
 				/>
 			</BoxTitleContainer>
 		</Container>

@@ -13,6 +13,8 @@ body {
 	margin: 0;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+	overflow-x: hidden;
+	overflow-y: auto;
 }
 article,
 aside,
@@ -281,11 +283,8 @@ h4 {
 	margin-left: 0;
 	margin-right: 0;
 	margin-top: 0;
-	padding-bottom: 0;
-	padding-left: 0;
-	padding-right: 0;
-	padding-top: 0;
-	margin-bottom: 1.45rem;
+	padding: 0;
+	margin-bottom: 0.5rem;
 	color: inherit;
 	font-family: 'Cabin Sketch', cursive;
 	font-weight: bold;
@@ -661,10 +660,12 @@ svg {
 .rbc-show-more {
 	color: hsl(228, 53%, 34%);
 }
-
-.timeline-header {
-	display: none !important;
+.rbc-toolbar-label {
+	font-size: 1.5em;
+	font-weight: 600;
+	margin-right: 3.5em;
 }
-.timeline-Footer {
-	display: none !important;
+
+button {
+	cursor: pointer;
 }

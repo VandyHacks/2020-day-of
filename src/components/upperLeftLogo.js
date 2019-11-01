@@ -78,6 +78,7 @@ const StyledButton = styled.button`
 	width: 16vw;
 	height: 5vh;
 	min-width: 120px;
+	min-height: 41px;
 	margin: 1em 0.8em 1.5em 1.2em;
 	text-align: center;
 	border: 3px solid hsl(228, 53%, 34%);

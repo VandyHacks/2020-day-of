@@ -59,8 +59,8 @@ const StyledFooter = styled.div`
 `;
 
 const StyledFooterMobile = styled.div`
-	padding-top: 0.5em;
-	padding-left: 0.3em;
+	padding: 0.2em 0 0 0.3em;
+	margin-bottom: 0.5em;
 	color: rgb(48, 72, 161);
 	height: 60px;
 	overflow: none;
@@ -136,8 +136,8 @@ const changeTheme = () => {
 const ToggleIcon = () => (
 	<svg
 		className="theme-toggler"
-		width="24"
-		height="24"
+		width={useContext(isMobileContext) ? '30' : '24'}
+		height={useContext(isMobileContext) ? '30' : '24'}
 		viewBox="0 0 48 48"
 		fill="hsl(228, 53%, 34%)"
 		xmlns="http://www.w3.org/2000/svg"
@@ -156,16 +156,16 @@ const SocialMedias = () => {
 			<StyledFooterMobile>
 				<SocialIcons>
 					<a href="https://www.facebook.com/vandyhacks" rel="noopener noreferrer" target="_blank">
-						<Facebook />
+						<Facebook style={{ height: '30px', width: '30px' }} />
 					</a>
 					<a href="https://twitter.com/vandyhacks" rel="noopener noreferrer" target="_blank">
-						<Twitter />
+						<Twitter style={{ height: '30px', width: '30px' }} />
 					</a>
 					<a href="https://www.instagram.com/vandyhacks" rel="noopener noreferrer" target="_blank">
-						<Instagram />
+						<Instagram style={{ height: '30px', width: '30px' }} />
 					</a>
 					<a href="https://www.github.com/VandyHacks" rel="noopener noreferrer" target="_blank">
-						<Github />
+						<Github style={{ height: '30px', width: '30px' }} />
 					</a>
 					<a onClick={changeTheme}>
 						<ToggleIcon />

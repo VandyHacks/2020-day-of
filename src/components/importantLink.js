@@ -134,7 +134,7 @@ const ScheduleBox = () => {
 	return (
 		<Container>
 			<BoxTitleContainer>
-				<h4>Important Links</h4>
+				<h4 style={{ fontSize: '1.7em' }}>Important Links</h4>
 				<StyledUL>
 					<StyledLi>
 						<a href="https://map.vandyhacks.org">Maps</a>
