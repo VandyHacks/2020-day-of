@@ -56,7 +56,7 @@ const StyledULTop = styled.ul`
 	padding: 0;
 	display: grid;
 	grid-template-columns: 8rem 8rem 8rem;
-	grid-template-rows: 8rem;
+	grid-template-rows: 7rem;
 `;
 
 const StyledULBottom = styled.ul`
@@ -65,7 +65,7 @@ const StyledULBottom = styled.ul`
 	padding: 0;
 	display: grid;
 	grid-template-columns: 12rem 12rem;
-	grid-template-rows: 12rem;
+	grid-template-rows: 11rem;
 `;
 
 const StyledLi = styled.li`
@@ -120,7 +120,6 @@ const PenStyleMobile = styled.div`
 	left: 82%;
 	width: 3.4em;
 	opacity: 1;
-	z-value: -1;
 `;
 
 const BubbleStyle = styled.div`
@@ -147,19 +146,19 @@ const ScheduleBox = () => {
 	const topIconSize = {
 		height: '7rem',
 		width: '7rem',
-		padding: '0.5rem',
+		padding: '0 0.5rem',
 		cursor: 'pointer',
 	};
 	const bottomIconSize = {
 		height: '11rem',
 		width: '11rem',
-		padding: '0.5rem',
+		padding: '0rem 0.5rem',
 		cursor: 'pointer',
 	};
 	const workshopIcon = {
 		height: '10rem',
 		width: '10rem',
-		padding: '1rem 0.5rem 1rem 1rem',
+		padding: '0.5rem 0.5rem 1rem 1rem',
 	};
 
 	return (
