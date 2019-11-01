@@ -27,8 +27,7 @@ const fadeIn = keyframes`
 `;
 
 const Container = styled.div`
-	margin: 0.5em;
-	margin-bottom: 2em;
+	margin: 0.5em 0.5em 2em;
 	position: relative;
 	width: 100%;
 	justify-content: left;

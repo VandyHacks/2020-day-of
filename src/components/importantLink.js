@@ -20,8 +20,7 @@ const fadeIn = keyframes`
 `;
 
 const Container = styled.div`
-	margin: 1em;
-	margin-bottom: 0;
+	margin: 0 0 0 1em;
 	position: relative;
 	width: 100%;
 	justify-content: left;
@@ -47,8 +46,7 @@ const BoxTitleContainer = styled.div`
 
 const StyledUL = styled.ul`
 	list-style-type: none;
-	margin: 0;
-	margin-top: 1em;
+	margin: 1em 0 0 0;
 	padding: 0;
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(100px, 50%));
