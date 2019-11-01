@@ -9,6 +9,11 @@ import isMobileContext from './isMobileContext';
 import StationeryPen from '../images/stationeryPen3.svg';
 import StationeryBox from '../images/stationeryBox.svg';
 import BubbleBox from '../images/speechbubble.svg';
+import Slack from '../images/slack.svg';
+import Maps from '../images/maps.svg';
+import Calendar from '../images/calendar.svg';
+import Books from '../images/books.svg';
+import Hammer from '../images/hammer.svg';
 
 const fadeIn = keyframes`
 	from { 
@@ -128,6 +133,11 @@ const BubbleStyleMobile = styled.div`
 
 const ScheduleBox = () => {
 	const isMobile = useContext(isMobileContext);
+	const iconSize = {
+		height: '90px',
+		width: '90px',
+		cursor: 'pointer',
+	};
 
 	return (
 		<Container>
@@ -135,19 +145,29 @@ const ScheduleBox = () => {
 				<h4 style={{ fontSize: '1.7em' }}>Important Links</h4>
 				<StyledUL>
 					<StyledLi>
-						<a href="https://map.vandyhacks.org">Maps</a>
+						<a href="https://map.vandyhacks.org">
+							<Maps style={iconSize} />
+						</a>
 					</StyledLi>
 					<StyledLi>
-						<a href="https://hackpacks.vandyhacks.org">HackPacks</a>
+						<a href="https://hackpacks.vandyhacks.org">
+							<Books style={iconSize} />
+						</a>
 					</StyledLi>
 					<StyledLi>
-						<a href="https://workshops.vandyhacks.org">Workshops</a>
+						<a href="https://workshops.vandyhacks.org">
+							<Hammer />
+						</a>
 					</StyledLi>
 					<StyledLi>
-						<a href="https://calendar.vandyhacks.org">Calendar</a>
+						<a href="https://calendar.vandyhacks.org">
+							<Calendar style={iconSize} />
+						</a>
 					</StyledLi>
 					<StyledLi>
-						<a href="https://vandyhacksvi.slack.com">Slack</a>
+						<a href="https://vandyhacksvi.slack.com">
+							<Slack style={iconSize} />
+						</a>
 					</StyledLi>
 				</StyledUL>
 			</BoxTitleContainer>
