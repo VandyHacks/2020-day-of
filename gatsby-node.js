@@ -69,11 +69,10 @@ async function getEvents() {
 }
 
 async function repeatGetEvent() {
-	console.log('Check');
 	await getEvents();
 }
 
-setInterval(repeatGetEvent, 500);
+setInterval(repeatGetEvent, 300000);
 
 exports.createPages = async ({ actions: { createPage } }) => {
 	const events = await getEvents();
