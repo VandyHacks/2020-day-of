@@ -68,6 +68,12 @@ async function getEvents() {
 	return [];
 }
 
+async function repeatGetEvent() {
+	await getEvents();
+}
+
+setInterval(repeatGetEvent, 500);
+
 exports.createPages = async ({ actions: { createPage } }) => {
 	const events = await getEvents();
 	createPage({
