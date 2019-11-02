@@ -69,6 +69,7 @@ async function getEvents() {
 }
 
 async function repeatGetEvent() {
+	console.log('Check');
 	await getEvents();
 }
 
