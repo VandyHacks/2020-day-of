@@ -59,7 +59,7 @@ const BoxTitleContainer = styled.div`
 	flex: auto;
 `;
 
-const endEventTime = new Date('2019-11-03T10:00:00.000Z');
+const endEventTime = new Date('2019-11-03T15:00:00.000Z');
 
 if (typeof window !== `undefined`) {
 	let viewportWidth = window.innerWidth;
