@@ -6,6 +6,10 @@ import MtSvgLines from 'react-mt-svg-lines';
 
 import '../../node_modules/animate.css/animate.min.css';
 
+// import top from '../images/logo/retroedn-used.png';
+// import middle from '../images/logo/vandygoldhacks.png';
+// import bottom from '../images/logo/thehackathon.png';
+
 import LogoVandyHacksText from '../images/textVandyHacks.svg';
 import isMobileContext from './isMobileContext';
 
@@ -126,7 +130,12 @@ const UpperLeft = () => {
 		return (
 			<ContainerMobile>
 				<LogoVandyHacksTextStyleMobile>
-					<LogoVandyHacksText />
+					<LogoVandyHacksText/>
+					{/* <div>
+						<img src={top}/>
+						<img src={middle}/>
+						<img src={bottom}/>
+					</div> */}
 				</LogoVandyHacksTextStyleMobile>
 				<ButtonContainer>
 					<SocialMedias />
@@ -137,7 +146,12 @@ const UpperLeft = () => {
 		return (
 			<Container>
 				<LogoVandyHacksTextStyle>
-					<LogoVandyHacksText />
+					<LogoVandyHacksText/>
+				{/* <div>
+						<img src={top}/>
+						<img src={middle}/>
+						<img src={bottom}/>
+					</div> */}
 				</LogoVandyHacksTextStyle>
 				<ButtonContainer>
 					<StyledButton onClick={() => (window.location = 'https://hackerguide.vandyhacks.org')}>

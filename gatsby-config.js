@@ -1,7 +1,7 @@
 module.exports = {
 	siteMetadata: {
-		title: process.env.STATUS == null ? `VandyHacks VI` : `${process.env.STATUS} VandyHacks VI`,
-		description: `VandyHacks VI: Art Edition will be held on November 1st–3rd. Applications are now open! Are you ready to code a masterpiece?`,
+		title: process.env.STATUS == null ? `VandyHacks VII` : `${process.env.STATUS} VandyHacks VII`,
+		description: `VandyHacks VII: Retro Edition will be held on October 2-4. Applications are now open! Are you ready to code a masterpiece?`,
 		author: `The VandyHacks Team`,
 	},
 	plugins: [
@@ -18,8 +18,8 @@ module.exports = {
 		{
 			resolve: `gatsby-plugin-manifest`,
 			options: {
-				name: `VandyHacks VI: Nashville's Premier Hackathon`,
-				short_name: `VandyHacks VI`,
+				name: `VandyHacks VII: Nashville's Premier Hackathon`,
+				short_name: `VandyHacks VII`,
 				start_url: `/`,
 				background_color: `#663399`,
 				theme_color: `#663399`,

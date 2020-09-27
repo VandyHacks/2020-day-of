@@ -96,14 +96,14 @@ const Boxes = () => {
 						</div>
 					</TextBox>
 				</BoxTitleContainer>
-				<BoxTitleContainer>
+				{/* <BoxTitleContainer>
 					<h4 style={{ fontSize: '1.5em' }}>Wifi Login</h4>
 					<TextBox>
 						Username: eduroam or vuGuest
 						<br />
 						No Password
 					</TextBox>
-				</BoxTitleContainer>
+				</BoxTitleContainer> */}
 			</ButtonContainer>
 			<BoxTitleContainer>
 				<h4 style={{ marginTop: isMobile ? '0' : '0.5rem', fontSize: '1.5em' }}>Announcements</h4>

@@ -1,10 +1,15 @@
 @import url('https://fonts.googleapis.com/css?family=Cabin&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Cabin+Sketch:400,700p-;&display=swap');
+@font-face {
+    font-family: 'DisposableDroidBB';
+    src: URL('fonts/DisposableDroidBB.ttf') format('truetype');
+}
+
 * {
 	user-select: none;
 }
 html {
-	font-family: 'Cabin', sans-serif;
+	font-family: DisposableDroidBB;
 	-ms-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
 }
@@ -208,7 +213,7 @@ html {
 }
 body {
 	color: hsla(0, 0%, 0%, 0.8);
-	font-family: 'Cabin', serif;
+	font-family: 'DisposableDroidBB', serif;
 	font-weight: normal;
 	word-wrap: break-word;
 	font-kerning: normal;
@@ -286,7 +291,7 @@ h4 {
 	padding: 0;
 	margin-bottom: 0.5rem;
 	color: inherit;
-	font-family: 'Cabin Sketch', cursive;
+	font-family: DisposableDroidBB, cursive;
 	font-weight: bold;
 	text-rendering: optimizeLegibility;
 	font-size: 1.5rem;
