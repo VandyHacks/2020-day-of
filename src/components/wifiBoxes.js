@@ -102,28 +102,23 @@ const Boxes = () => {
 						</div>
 					</TextBox>
 				</BoxTitleContainer>
-				{/* <BoxTitleContainer>
-					<h4 style={{ fontSize: '1.5em' }}>Wifi Login</h4>
-					<TextBox>
-						Username: eduroam or vuGuest
-						<br />
-						No Password
-					</TextBox>
-				</BoxTitleContainer> */}
 			</ButtonContainer>
 			<BoxTitleContainer>
 				<h4 style={{ marginTop: isMobile ? '2rem' : '0.5rem', fontSize: '1.5em' }}>
 					Announcements
 				</h4>
-				<TwitterTimelineEmbed
-					sourceType="profile"
-					screenName="VandyHacks"
-					options={{
-						minHeight: '420px',
-						height: 930 < window.innerWidth && window.innerWidth < 1310 ? '44vh' : '48vh',
-						width: isMobile ? '95vw' : '40vw',
-					}} // 1306px is threshold
-				/>
+				<div className="twitter-feed">
+					<TwitterTimelineEmbed
+						sourceType="profile"
+						screenName="VandyHacks"
+						borderColor="#FDA50F"
+						options={{
+							minHeight: '420px',
+							height: 930 < window.innerWidth && window.innerWidth < 1310 ? '44vh' : '48vh',
+							width: isMobile ? '95vw' : '39vw',
+						}} // 1306px is threshold
+					/>
+				</div>
 			</BoxTitleContainer>
 		</Container>
 	);

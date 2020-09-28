@@ -97,6 +97,18 @@ const ScheduleBox = ({ events }) => {
 						localizer={localizer}
 						toolbar={true}
 						length={0}
+						eventPropGetter={(event, start, end, isSelected) => {
+							let today = Date.now();
+							if (today > start && today < end) {
+								let newStyle = {
+									color: '#FDA50F',
+								};
+								return {
+									style: newStyle,
+								};
+							}
+							return {};
+						}}
 					/>
 				</div>
 			</ContainerMobile>
@@ -122,6 +134,18 @@ const ScheduleBox = ({ events }) => {
 						localizer={localizer}
 						toolbar={true}
 						// length={1}
+						eventPropGetter={(event, start, end, isSelected) => {
+							let today = Date.now();
+							if (today > start && today < end) {
+								let newStyle = {
+									color: '#FDA50F',
+								};
+								return {
+									style: newStyle,
+								};
+							}
+							return {};
+						}}
 					/>
 				</div>
 			</Container>
