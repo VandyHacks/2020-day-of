@@ -32,7 +32,7 @@ const Container = styled.div`
 	animation: ${fadeIn} 1s linear;
 	&:after {
 		content: '';
-		border-color: hsl(228, 53%, 34%);
+		border-color: #fda50f;
 		position: absolute;
 		bottom: 0;
 		left: -0em;
@@ -85,10 +85,10 @@ const StyledButton = styled.button`
 	min-height: 41px;
 	margin: 1em 0.8em 1.5em 1.2em;
 	text-align: center;
-	border: 3px solid hsl(228, 53%, 34%);
+	border: 3px solid #fda50f;
 	border-radius: 6px;
 	background: none;
-	color: #293c85;
+	color: #fda50f;
 	font-weight: 600;
 	font-size: larger;
 	transition: all 0.25s linear;
@@ -97,7 +97,7 @@ const StyledButton = styled.button`
 
 	&:hover,
 	&:focus {
-		background-color: hsl(228, 53%, 34%);
+		background-color: #fda50f;
 		color: white;
 		cursor: pointer;
 	}
@@ -130,7 +130,8 @@ const UpperLeft = () => {
 		return (
 			<ContainerMobile>
 				<LogoVandyHacksTextStyleMobile>
-					<LogoVandyHacksText/>
+					<h1>VandyHacks VII</h1>
+					{/* <LogoVandyHacksText /> */}
 					{/* <div>
 						<img src={top}/>
 						<img src={middle}/>
@@ -146,7 +147,9 @@ const UpperLeft = () => {
 		return (
 			<Container>
 				<LogoVandyHacksTextStyle>
-					<LogoVandyHacksText/>
+					{/* <LogoVandyHacksText /> */}
+					<h1 class="logo">VandyHacks VII</h1>
+
 				{/* <div>
 						<img src={top}/>
 						<img src={middle}/>

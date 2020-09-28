@@ -13,11 +13,11 @@ require('dotenv').config({
 
 // const superagent = require('superagent');
 
-const CALENDAR_ID = 'vanderbilt.edu_8p58kn7032badn5et22pq1iqjs@group.calendar.google.com';
+const CALENDAR_ID = 'c_cnqdsllqeigeg775do4jvnukgs@group.calendar.google.com';
 const EVENTTYPE = 'VEVENT';
 const API_KEY = `${process.env.API_KEY}`;
-const TIME_MIN = '2019-10-01T00:00:00Z';
-const TIME_MAX = '2019-11-04T10:00:00Z';
+const TIME_MIN = '2020-10-01T00:00:00Z';
+const TIME_MAX = '2020-11-04T10:00:00Z';
 let url = `https://www.googleapis.com/calendar/v3/calendars/${CALENDAR_ID}/events?key=${API_KEY}&orderBy=startTime&&singleEvents=true&timeMin=${TIME_MIN}&timeMax=${TIME_MAX}`;
 
 // const startEventTime = new Date('2019-10-01T00:00:00.000Z');

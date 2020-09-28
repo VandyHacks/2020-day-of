@@ -35,7 +35,7 @@ const StyledFooter = styled.div`
 	path,
 	rect,
 	line {
-		stroke: rgb(48, 72, 161);
+		stroke: #fda50f;
 	}
 
 	@media screen and (max-width: 480px) {
@@ -139,7 +139,7 @@ const ToggleIcon = () => (
 		width={useContext(isMobileContext) ? '30' : '24'}
 		height={useContext(isMobileContext) ? '30' : '24'}
 		viewBox="0 0 48 48"
-		fill="hsl(228, 53%, 34%)"
+		fill="#fda50f"
 		xmlns="http://www.w3.org/2000/svg"
 	>
 		<path

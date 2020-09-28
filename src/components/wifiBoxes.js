@@ -33,11 +33,11 @@ const Container = styled.div`
 const TextBox = styled.div`
 	font-size: 0.8em;
 	color: #fff;
-	background: hsl(228, 53%, 34%);
+	background: rgb(253, 165, 15);
 	margin: 0rem 1rem 1rem;
 	padding: 1em 3em;
 	border-radius: 30px;
-	height: 4.2rem;
+	height: 3.5rem;
 
 	display: flex;
 	justify-content: center; /* align horizontal */
@@ -59,7 +59,7 @@ const BoxTitleContainer = styled.div`
 	flex: auto;
 `;
 
-const endEventTime = new Date('2019-11-03T15:00:00.000Z');
+const endEventTime = new Date('Oct 04 2020 08:30:00 GMT-0500');
 
 if (typeof window !== `undefined`) {
 	let viewportWidth = window.innerWidth;
@@ -81,10 +81,10 @@ const Boxes = () => {
 			<ButtonContainer>
 				<BoxTitleContainer>
 					<h4 style={{ fontSize: '1.5em' }}>Time Remaining</h4>
-					<TextBox style={{ fontSize: '1.5em', minWidth: '11.7em' }}>
+					<TextBox style={{ fontSize: '1.5em', maxWidth: '42.7vw' }}>
 						<div
 							style={{
-								fontFamily: 'Segoe UI Regular',
+								// fontFamily: 'Segoe UI Regular',
 								fontVariantNumeric: 'tabular-nums',
 								minWidth: '172px',
 								width: '50%',
@@ -111,8 +111,8 @@ const Boxes = () => {
 					sourceType="profile"
 					screenName="VandyHacks"
 					options={{
-						minHeight: '440px',
-						height: 930 < window.innerWidth && window.innerWidth < 1310 ? '40vh' : '51vh',
+						minHeight: '300px',
+						height: 930 < window.innerWidth && window.innerWidth < 1310 ? '23vh' : '43vh',
 						width: isMobile ? '95vw' : '40vw',
 					}} // 1306px is threshold
 				/>

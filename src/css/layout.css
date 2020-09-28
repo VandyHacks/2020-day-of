@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Cabin&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Cabin+Sketch:400,700p-;&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 @font-face {
     font-family: 'DisposableDroidBB';
     src: URL('fonts/DisposableDroidBB.ttf') format('truetype');
@@ -676,5 +677,14 @@ button {
 }
 
 .icon {
-	fill: rgb(41, 59, 133);
+	fill: rgb(253, 165, 15);
+}
+
+.logo{
+	color: rgb(253, 165, 15);
+	text-align: center;
+	font-family: 'Press Start 2P';
+	margin-top: 1.4rem;
+	line-height: 3.2rem;
+	font-size: 2.1rem;
 }
