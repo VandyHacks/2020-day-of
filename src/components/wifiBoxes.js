@@ -8,6 +8,7 @@ import '../../node_modules/animate.css/animate.min.css';
 import isMobileContext from './isMobileContext';
 import Countdown from 'react-countdown-now';
 import { TwitterTimelineEmbed } from 'react-twitter-embed';
+import WidgetBot, { API } from '@widgetbot/react-embed';
 
 const fadeIn = keyframes`
 	from { 
@@ -75,6 +76,7 @@ if (typeof window !== `undefined`) {
 }
 
 const Boxes = () => {
+
 	const isMobile = useContext(isMobileContext);
 	return (
 		<Container>
@@ -107,7 +109,7 @@ const Boxes = () => {
 				<h4 style={{ marginTop: isMobile ? '2rem' : '0.5rem', fontSize: '1.5em' }}>
 					Announcements
 				</h4>
-				<div className="twitter-feed">
+				{/* <div className="twitter-feed">
 					<TwitterTimelineEmbed
 						sourceType="profile"
 						screenName="VandyHacks"
@@ -118,7 +120,15 @@ const Boxes = () => {
 							width: isMobile ? '95vw' : '39vw',
 						}} // 1306px is threshold
 					/>
-				</div>
+				</div> */}
+
+				<WidgetBot
+					server="755112297772351499"
+					channel="755112297986392146"
+					height={930 < window.innerWidth && window.innerWidth < 1310 ? '44vh' : '48vh'}
+					width={isMobile ? '86vw' : '39vw'}
+				/>
+				{/* <iframe src="https://discord.com/widget?id=755112297772351499&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe> */}
 			</BoxTitleContainer>
 		</Container>
 	);
