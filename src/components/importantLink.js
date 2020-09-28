@@ -167,7 +167,11 @@ const ScheduleBox = () => {
 					<h4 style={{ fontSize: '1.7em', marginBottom: '1.7rem' }}>Important Links</h4>
 					<StyledULTopMoible>
 						<StyledLi>
-							<a href="https://calendar.vandyhacks.org" rel="noopener noreferrer" target="_blank">
+							<a
+								href="https://calendar.google.com/calendar/u/0?cid=Y19jbnFkc2xscWVpZ2VnNzc1ZG80anZudWtnc0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t"
+								rel="noopener noreferrer"
+								target="_blank"
+							>
 								<Calendar id="calendar" className="icon" style={topIconSize} />
 								<p
 									style={{
@@ -182,7 +186,7 @@ const ScheduleBox = () => {
 						</StyledLi>
 						<StyledLi />
 						<StyledLi>
-							<a href="https://vandyhacksvi.slack.com" rel="noopener noreferrer" target="_blank">
+							<a href="https://discord.gg/VDQGkBq" rel="noopener noreferrer" target="_blank">
 								<Discord id="discord" className="icon" style={topIconSize} />
 								<p style={{ marginTop: '-1.8em', color: 'rgb(253, 165, 15)', textAlign: 'center' }}>
 									Discord
