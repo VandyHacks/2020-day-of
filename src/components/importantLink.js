@@ -93,8 +93,6 @@ const StyledULTopMoible = styled.ul`
 	margin: 0;
 	padding: 0;
 	display: grid;
-	grid-template-columns: 8.3rem;
-	grid-template-rows: 7rem;
 
 	align-content: center;
 	justify-content: center;
