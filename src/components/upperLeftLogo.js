@@ -163,7 +163,6 @@ const UpperLeft = () => {
 
 const UpperLeftAnimated = () => (
 	<InViewMonitor
-		classNameNotInView="vis-hidden"
 		classNameInView="animated fadeInLeft" // fadeInLeft, or fadeInRight
 	>
 		<UpperLeft />
