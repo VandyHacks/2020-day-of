@@ -162,7 +162,7 @@ const ScheduleBox = () => {
 
 	if (isMobile) {
 		return (
-			<Container style={{ marginLeft: '-0.7rem' }}>
+			<Container style={{ marginLeft: '-0.4rem' }}>
 				<BoxTitleContainer style={{ width: '100%', margin: '0' }}>
 					<h4 style={{ fontSize: '1.7em', marginBottom: '1.7rem' }}>Important Links</h4>
 					<StyledULTopMoible>
