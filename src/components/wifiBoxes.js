@@ -111,8 +111,8 @@ const Boxes = () => {
 					sourceType="profile"
 					screenName="VandyHacks"
 					options={{
-						minHeight: '300px',
-						height: 930 < window.innerWidth && window.innerWidth < 1310 ? '23vh' : '43vh',
+						minHeight: '380px',
+						height: 930 < window.innerWidth && window.innerWidth < 1310 ? '42vh' : '48vh',
 						width: isMobile ? '95vw' : '40vw',
 					}} // 1306px is threshold
 				/>

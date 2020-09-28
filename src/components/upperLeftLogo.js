@@ -149,7 +149,6 @@ const UpperLeft = () => {
 				<LogoVandyHacksTextStyle>
 					{/* <LogoVandyHacksText /> */}
 					<h1 class="logo">VandyHacks VII</h1>
-
 				{/* <div>
 						<img src={top}/>
 						<img src={middle}/>

@@ -108,7 +108,7 @@ const ScheduleBox = ({ events }) => {
 					<h4>Schedule</h4>
 				</BoxTitleContainer>
 
-				<div style={{ height: '380px' }}>
+				<div style={{ height: '51vh' }}>
 					<Calendar
 						events={events}
 						// step={60}
