@@ -130,13 +130,9 @@ const UpperLeft = () => {
 		return (
 			<ContainerMobile>
 				<LogoVandyHacksTextStyleMobile>
-					<h1>VandyHacks VII</h1>
-					{/* <LogoVandyHacksText /> */}
-					{/* <div>
-						<img src={top}/>
-						<img src={middle}/>
-						<img src={bottom}/>
-					</div> */}
+					<h1 className="logo" style={{ marginTop: '8rem', fontSize: '1.4rem' }}>
+						VandyHacks VII
+					</h1>
 				</LogoVandyHacksTextStyleMobile>
 				<ButtonContainer>
 					<SocialMedias />
@@ -148,7 +144,7 @@ const UpperLeft = () => {
 			<Container>
 				<LogoVandyHacksTextStyle>
 					{/* <LogoVandyHacksText /> */}
-					<h1 class="logo">VandyHacks VII</h1>
+					<h1 className="logo">VandyHacks VII</h1>
 				{/* <div>
 						<img src={top}/>
 						<img src={middle}/>

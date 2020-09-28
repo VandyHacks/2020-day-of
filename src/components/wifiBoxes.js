@@ -34,7 +34,7 @@ const TextBox = styled.div`
 	font-size: 0.8em;
 	color: #fff;
 	background: rgb(253, 165, 15);
-	margin: 0rem 1rem 1rem;
+	margin: 0rem auto;
 	padding: 1em 3em;
 	border-radius: 30px;
 	height: 3.5rem;
@@ -81,7 +81,13 @@ const Boxes = () => {
 			<ButtonContainer>
 				<BoxTitleContainer>
 					<h4 style={{ fontSize: '1.5em' }}>Time Remaining</h4>
-					<TextBox style={{ fontSize: '1.5em', maxWidth: '42.7vw' }}>
+					<TextBox
+						style={{
+							fontSize: '1.5em',
+							maxWidth: isMobile ? '86vw' : '41.7vw',
+							textAlign: 'center',
+						}}
+					>
 						<div
 							style={{
 								// fontFamily: 'Segoe UI Regular',
@@ -106,13 +112,15 @@ const Boxes = () => {
 				</BoxTitleContainer> */}
 			</ButtonContainer>
 			<BoxTitleContainer>
-				<h4 style={{ marginTop: isMobile ? '0' : '0.5rem', fontSize: '1.5em' }}>Announcements</h4>
+				<h4 style={{ marginTop: isMobile ? '2rem' : '0.5rem', fontSize: '1.5em' }}>
+					Announcements
+				</h4>
 				<TwitterTimelineEmbed
 					sourceType="profile"
 					screenName="VandyHacks"
 					options={{
-						minHeight: '380px',
-						height: 930 < window.innerWidth && window.innerWidth < 1310 ? '42vh' : '48vh',
+						minHeight: '420px',
+						height: 930 < window.innerWidth && window.innerWidth < 1310 ? '44vh' : '48vh',
 						width: isMobile ? '95vw' : '40vw',
 					}} // 1306px is threshold
 				/>

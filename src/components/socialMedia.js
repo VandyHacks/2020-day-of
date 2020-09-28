@@ -85,7 +85,7 @@ const StyledFooterMobile = styled.div`
 	path,
 	rect,
 	line {
-		stroke: rgb(48, 72, 161);
+		stroke: #fda50f;
 	}
 
 	@media screen and (max-width: 480px) {

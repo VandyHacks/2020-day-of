@@ -90,13 +90,13 @@ const ScheduleBox = ({ events }) => {
 						views={['day', 'agenda']}
 						showMultiDayTimes
 						// max={dates.add(dates.endOf(new Date(2015, 17, 1), 'day'), -1, 'hours')}
-						// defaultDate={new Date(2015, 3, 1)}
 						components={{
 							timeSlotWrapper: ColoredDateCellWrapper,
 						}}
+						defaultDate={new Date(2020, 9, 2)}
 						localizer={localizer}
 						toolbar={true}
-						length={1}
+						length={0}
 					/>
 				</div>
 			</ContainerMobile>
