@@ -8,7 +8,9 @@ import '../../node_modules/animate.css/animate.min.css';
 import isMobileContext from './isMobileContext';
 import Countdown from 'react-countdown-now';
 import { TwitterTimelineEmbed } from 'react-twitter-embed';
-import WidgetBot, { API } from '@widgetbot/react-embed';
+import WidgetBot from '@widgetbot/react-embed';
+
+// import DiscordApp from './discordApp.tsx';
 
 const fadeIn = keyframes`
 	from { 
@@ -76,7 +78,6 @@ if (typeof window !== `undefined`) {
 }
 
 const Boxes = () => {
-
 	const isMobile = useContext(isMobileContext);
 	return (
 		<Container>
@@ -122,13 +123,26 @@ const Boxes = () => {
 					/>
 				</div> */}
 
-				<WidgetBot
+				{/* <WidgetBot
 					server="755112297772351499"
 					channel="755112297986392146"
 					height={930 < window.innerWidth && window.innerWidth < 1310 ? '44vh' : '48vh'}
 					width={isMobile ? '86vw' : '39vw'}
-				/>
-				{/* <iframe src="https://discord.com/widget?id=755112297772351499&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe> */}
+				/> */}
+				<iframe
+					src="https://e.widgetbot.io/channels/755112297772351499/755112297986392146"
+					height={
+						930 < window.innerWidth && window.innerWidth < 1310
+							? document.documentElement.clientHeight * 0.44
+							: document.documentElement.clientHeight * 0.48
+					}
+					width={
+						isMobile
+							? document.documentElement.clientWidth * 0.86
+							: document.documentElement.clientWidth * 0.39
+					}
+					title="discord app"
+				></iframe>
 			</BoxTitleContainer>
 		</Container>
 	);
@@ -138,6 +152,7 @@ const BoxesAnimated = () => (
 	<InViewMonitor
 		classNameNotInView="vis-hidden"
 		classNameInView="animated fadeInLeft" // fadeInLeft, or fadeInRight
+		Style={{ backgroundColor: 'transparent' }}
 	>
 		<Boxes />
 	</InViewMonitor>
