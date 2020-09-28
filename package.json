@@ -42,7 +42,7 @@
     "superagent": "^5.1.0"
   },
   "devDependencies": {
-    "css-loader": "^3.2.0",
+    "css-loader": "^3.6.0",
     "eslint": "^6.3.0",
     "eslint-config-prettier": "^6.2.0",
     "eslint-config-react-app": "^5.0.1",
@@ -50,7 +50,7 @@
     "moment": "^2.24.0",
     "prettier": "^1.18.2",
     "react-big-calendar": "^0.22.1",
-    "style-loader": "^1.0.0"
+    "style-loader": "^1.2.1"
   },
   "keywords": [
     "gatsby",
