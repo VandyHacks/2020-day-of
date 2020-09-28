@@ -630,6 +630,12 @@ pre tt:after {
 		font-size: 100%;
 	}
 }
+
+@media only screen and (min-width: 480px) {
+	html {
+		font-size: 110%;
+	}
+}
 .vis-hidden {
 	visibility: hidden;
 }
@@ -647,6 +653,9 @@ body {
 
 svg {
 	pointer-events: none;
+}
+.rbc-agenda-table {
+	font-size: 1.2rem;
 }
 .rbc-toolbar {
 	font-size: 0.7em;

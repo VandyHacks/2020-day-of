@@ -84,7 +84,7 @@ const StyledULTop = styled.ul`
 	margin: 0;
 	padding: 0;
 	display: grid;
-	grid-template-columns: 8.3rem 8.3rem 8.3rem 8.3rem;
+	grid-template-columns: 8.3rem 8.3rem;
 	grid-template-rows: 7rem;
 `;
 
@@ -185,23 +185,23 @@ const ScheduleBox = () => {
 							</a>
 						</StyledLi>
 						<StyledLi />
-						<StyledLi>
+						{/* <StyledLi>
 							<a href="https://discord.gg/VDQGkBq" rel="noopener noreferrer" target="_blank">
 								<Discord id="discord" className="icon" style={topIconSize} />
 								<p style={{ marginTop: '-1.8em', color: 'rgb(253, 165, 15)', textAlign: 'center' }}>
 									Discord
 								</p>
 							</a>
-						</StyledLi>
+						</StyledLi> */}
 						<StyledLi>
 							<a href="https://learn.vandyhacks.org" rel="noopener noreferrer" target="_blank">
 								<Books id="books" className="icon" style={hackpackIconSize} />
 								<p style={{ marginTop: '-3.7em', color: 'rgb(253, 165, 15)', textAlign: 'center' }}>
-									Hackpacks
+									Workshops
 								</p>
 							</a>
 						</StyledLi>
-						<StyledLi>
+						{/* <StyledLi>
 							<a href="https://learn.vandyhacks.org" rel="noopener noreferrer" target="_blank">
 								<Workshop id="workshops" className="icon" style={workshopIcon} />
 								<p
@@ -214,7 +214,7 @@ const ScheduleBox = () => {
 									Workshops
 								</p>
 							</a>
-						</StyledLi>
+						</StyledLi> */}
 					</StyledULTopMoible>
 				</BoxTitleContainer>
 			</Container>
@@ -225,7 +225,7 @@ const ScheduleBox = () => {
 			<BoxTitleContainer>
 				<h4 style={{ fontSize: '1.7em', marginBottom: '1.7rem' }}>Important Links</h4>
 				<StyledULTop>
-					<StyledLi>
+					{/* <StyledLi>
 						<a href="https://calendar.vandyhacks.org" rel="noopener noreferrer" target="_blank">
 							<Calendar id="calendar" className="icon" style={topIconSize} />
 							<p
@@ -238,7 +238,7 @@ const ScheduleBox = () => {
 								Calendar
 							</p>
 						</a>
-					</StyledLi>
+					</StyledLi> */}
 					<StyledLi>
 						<a href="https://vandyhacksvi.slack.com" rel="noopener noreferrer" target="_blank">
 							<Discord id="discord" className="icon" style={topIconSize} />
@@ -252,11 +252,11 @@ const ScheduleBox = () => {
 						<a href="https://learn.vandyhacks.org" rel="noopener noreferrer" target="_blank">
 							<Books id="books" className="icon" style={hackpackIconSize} />
 							<p style={{ marginTop: '-2.3em', color: 'rgb(253, 165, 15)', marginLeft: '2.4rem' }}>
-								Hackpacks
+								Workshops
 							</p>
 						</a>
 					</StyledLi>
-					<StyledLi>
+					{/* <StyledLi>
 						<a href="https://learn.vandyhacks.org" rel="noopener noreferrer" target="_blank">
 							<Workshop id="workshops" className="icon" style={workshopIcon} />
 							<p
@@ -269,7 +269,7 @@ const ScheduleBox = () => {
 								Workshops
 							</p>
 						</a>
-					</StyledLi>
+					</StyledLi> */}
 				</StyledULTop>
 			</BoxTitleContainer>
 		</Container>
