@@ -118,7 +118,7 @@ const ScrollAnimateInLineSvg = ({ SvgElement }) => (
 		classNameInView=""
 		childPropsInView={{ animate: true }}
 	>
-		<MtSvgLines duration={3500} fade>
+		<MtSvgLines duration={2500} fade>
 			{SvgElement}
 		</MtSvgLines>
 	</InViewMonitor>
@@ -145,7 +145,7 @@ const UpperLeft = () => {
 				<LogoVandyHacksTextStyle>
 					{/* <LogoVandyHacksText /> */}
 					<h1 className="logo">VandyHacks VII</h1>
-				{/* <div>
+					{/* <div>
 						<img src={top}/>
 						<img src={middle}/>
 						<img src={bottom}/>
@@ -161,6 +161,13 @@ const UpperLeft = () => {
 		);
 };
 
-const UpperLeftAnimated = () => <ScrollAnimateInLineSvg SvgElement={<UpperLeft />} />;
+const UpperLeftAnimated = () => (
+	<InViewMonitor
+		classNameNotInView="vis-hidden"
+		classNameInView="animated fadeInLeft" // fadeInLeft, or fadeInRight
+	>
+		<UpperLeft />
+	</InViewMonitor>
+);
 
 export default UpperLeftAnimated;
