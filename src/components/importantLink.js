@@ -195,7 +195,7 @@ const ScheduleBox = () => {
 						</a>
 					</StyledLi>
 					<StyledLi>
-						<a href="https://learn.vandyhacks.org">
+						<a href="https://learn.vandyhacks.org" target="_blank">
 							<Workshop id="workshops" className="icon" style={workshopIcon} />
 							<p
 								style={{
