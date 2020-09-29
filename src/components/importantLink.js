@@ -143,8 +143,8 @@ const ScheduleBox = () => {
 				cursor: 'pointer',
 		  }
 		: {
-				height: '8.4rem',
-				width: '8.4rem',
+				height: '8rem',
+				width: '8rem',
 				padding: '0 0 1.5rem 0',
 				cursor: 'pointer',
 		  };
@@ -225,8 +225,12 @@ const ScheduleBox = () => {
 			<BoxTitleContainer>
 				<h4 style={{ fontSize: '1.7em', marginBottom: '1.7rem' }}>Important Links</h4>
 				<StyledULTop>
-					{/* <StyledLi>
-						<a href="https://calendar.vandyhacks.org" rel="noopener noreferrer" target="_blank">
+					<StyledLi>
+						<a
+							href="https://calendar.google.com/calendar/u/0?cid=Y19jbnFkc2xscWVpZ2VnNzc1ZG80anZudWtnc0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t"
+							rel="noopener noreferrer"
+							target="_blank"
+						>
 							<Calendar id="calendar" className="icon" style={topIconSize} />
 							<p
 								style={{
@@ -238,15 +242,15 @@ const ScheduleBox = () => {
 								Calendar
 							</p>
 						</a>
-					</StyledLi> */}
-					<StyledLi>
+					</StyledLi>
+					{/* <StyledLi>
 						<a href="https://vandyhacksvi.slack.com" rel="noopener noreferrer" target="_blank">
 							<Discord id="discord" className="icon" style={topIconSize} />
 							<p style={{ marginTop: '-0.6em', color: 'rgb(253, 165, 15)', marginLeft: '2.7rem' }}>
 								Discord
 							</p>
 						</a>
-					</StyledLi>
+					</StyledLi> */}
 					{/* <StyledULBottom> */}
 					<StyledLi>
 						<a href="https://learn.vandyhacks.org" rel="noopener noreferrer" target="_blank">
