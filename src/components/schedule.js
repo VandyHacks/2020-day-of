@@ -87,16 +87,16 @@ const ScheduleBox = ({ events }) => {
 						events={events}
 						// step={60}
 						defaultView={'agenda'}
-						views={['day', 'agenda']}
+						views={['agenda', 'day']}
 						showMultiDayTimes
 						// max={dates.add(dates.endOf(new Date(2015, 17, 1), 'day'), -1, 'hours')}
 						components={{
 							timeSlotWrapper: ColoredDateCellWrapper,
 						}}
-						defaultDate={new Date(2020, 9, 2)}
+						// defaultDate={new Date(2020, 9, 2)}
 						localizer={localizer}
 						toolbar={true}
-						length={0}
+						length={1}
 						eventPropGetter={(event, start, end, isSelected) => {
 							let today = Date.now();
 							if (today > start && today < end) {
