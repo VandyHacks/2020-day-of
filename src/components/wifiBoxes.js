@@ -62,9 +62,8 @@ const BoxTitleContainer = styled.div`
 	flex: auto;
 `;
 
-// const endEventTime = new Date('Oct 04 2020 08:30:00 GMT-0500');
-const endEventTime = new Date('Oct 02 2020 21:00:00 GMT-0500');
-
+const endEventTime = new Date('Oct 04 2020 08:30:00 GMT-0500');
+// const endEventTime = new Date('Oct 02 2020 21:00:00 GMT-0500');
 
 if (typeof window !== `undefined`) {
 	let viewportWidth = window.innerWidth;
